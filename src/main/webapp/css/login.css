@@ -1,0 +1,89 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-size: cover;
+    background-image: url(../imagen/fondonegro.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%,-50%);
+}
+.container h1{
+    color: white;
+    font-family: serif;
+    font-size: 250%;
+    border-bottom: 1px solid greenyellow;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+}
+.campo p{
+    color: white;
+    font-style: normal;
+    font-family: serif;
+    font-size: 200%;
+    text-indent: 0%;
+    text-decoration: none;
+}
+.box{
+    overflow: hidden;
+    width: 160%;
+    padding: 8px 0;
+    font-size: large;
+    margin: 8px 0;
+}
+.campo input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    border-bottom: 2px solid greenyellow;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.822);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.651);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.815);
+  }
+  
+  .boton .button{
+    width: 155%;
+    background: none;
+    border: 1px solid white;
+    cursor: pointer;
+    float: left;
+   margin-top: 30px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: Corbel Light;
+    font-size: 130%;
+ }
+ .regresar{
+    
+    top: 10px;
+ }
+ .regresar a{
+     color: white;
+     border: 2px;
+     border-color: white;
+     cursor: pointer;
+    text-decoration: none;
+    font-family: 'Courier New';
+    
+ }

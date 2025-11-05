@@ -1,0 +1,52 @@
+# Compiled files
+target/
+*.class
+
+# Environment variables - NEVER commit these!
+.env
+db.properties
+database.properties
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+nb-configuration.xml
+nbactions.xml
+
+# Images - Copyright protection
+src/main/webapp/IMG/**
+src/main/webapp/imagen/**
+target/SOFITWARE5TO-1.0-SNAPSHOT/IMG/**
+target/SOFITWARE5TO-1.0-SNAPSHOT/imagen/**
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.jfif
+
+# Exception: Keep placeholder images if you add them later
+!src/main/webapp/IMG/placeholder.png
+!src/main/webapp/imagen/placeholder.png
+
+# PDFs and uploaded files
+src/main/webapp/pdf/**
+src/main/webapp/files/**
+target/SOFITWARE5TO-1.0-SNAPSHOT/pdf/**
+target/SOFITWARE5TO-1.0-SNAPSHOT/files/**
+*.pdf
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd

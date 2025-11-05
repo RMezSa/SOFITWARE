@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign_in</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/signin.css">
+   <script>
+        function nombres(e){
+            var numeros = "qwertyuioplkjhgfds azxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM";
+            var x = e.which || e.keycode;
+            var numero = String.fromCharCode(x);
+            var n = numeros.indexOf(numero);
+            if(n === -1){
+                return false;
+            }
+            else 
+                return true;    
+            }
+            function usuario(e){
+                var numeros = "qwertyuioplkjhgfdsazxcvbnmQWERTYUIOP LKJHGFDSAZXCVBNM0123456987";
+                var x = e.which || e.keycode;
+                var numero = String.fromCharCode(x);
+                var n = numeros.indexOf(numero);
+                if(n === -1){
+                    return false;
+                }
+                else 
+                    return true;
+            }
+            function edads(e){
+                var numeros = "0123456789";
+                var x = e.which || e.keycode;
+                var numero = String.fromCharCode(x);
+                var n = numeros.indexOf(numero);
+                    if(n === -1){
+                        return false;
+                    }
+                    else 
+                        return true;
+            }
+            function validar(){
+                var ok = true;
+                var nom = document.getElementById("nombre");
+                var apellidos = document.getElementById("apellido");
+                var peso = document.getElementById("peso");
+                var altura = document.getElementById("altura");
+                var expasesor = document.getElementById("expasesor");
+                var expentrenando = document.getElementById("expentrenando");
+                var eda = document.getElementById("edad");
+                var cor = document.getElementById("correo").value;
+                var hom = document.getElementById("uno");
+                var muj = document.getElementById("dos");
+                var usu = document.getElementById("usuario");
+                var con = document.getElementById("contra");
+                
+                if (nom.value === ""){
+                    swal("Ingresa un nombre");
+                    return false;
+                }
+                else
+                    if (apellidos.value === ""){
+                        swal("Ingresa un apellido");
+                        return false;
+                    }
+                else
+                    if (peso.value === ""){
+                        swal("Ingresa un peso");
+                        return false;
+                    }
+                else
+                    if (peso.value <= 50 || peso.value > 150){
+                        swal("Peso incorrecto");
+                        return false;
+                    }
+                else
+                    if (altura.value === ""){
+                        swal("Ingresa una altura");
+                        return false;
+                    }
+                else
+                    if (altura.value <= 100 || altura.value > 300){
+                        swal("Altura incorrecta");
+                        return false;
+                    }
+                else
+                    if (expasesor.value === ""){
+                        swal("Ingresa tu experiencia asesorando");
+                        return false;
+                    }
+                else
+                    if (expentrenando.value === ""){
+                        swal("Ingresa tu experiencia entrenando");
+                        return false;
+                    }
+                else
+                    if(eda.value === ""){
+                        swal("Edad incorrecta");
+                        return false;
+                    }
+                else 
+                    if(eda.value.length >= 3){
+                        swal("Edad incorrecta");
+                        return false;
+                    }
+                else
+                    if(!/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(cor)){
+                        swal("Correo incorrecto");
+                        return false;
+                    }
+                else
+                    if(hom.checked === false && muj.checked === false){
+                        swal("Formulario incompleto");
+                        return false;
+                    }
+                else
+                    if (usu.value === ""){
+                        swal("Ingresa un usuario");
+                        return false;
+                    }
+                else
+                    if(con.value === ""){
+                        swal("Contraseña incorrecta");
+                        return false;
+                    }
+                else
+                    if (con.value.length <= 4){
+                        swal("Contraseña muy corta");
+                        return false;
+                    }
+                
+                return true;
+            }    
+           
+            
+    </script>
+</head>
+<body>
+    <div class="float">
+    <div class="container">
+                <h1 class="regis">SIGN IN ENTRENADOR</h1>    
+            <form action="sign-entrenador.jsp" class="sign">
+                    <div class="campo">
+                        <p>Nombre</p>
+                        <input type="text" class="box nombre-btn" placeholder="NOMBRE" name="nombre" id="nombre" onkeypress="return nombres(event)">
+                        <p>Apellidos</p>
+                        <input type="text" class="box nombre-btn" placeholder="APELLIDOS" name="apellido" id="apellido" onkeypress="return nombres(event)">
+                        <p>Peso</p>
+                        <input type="number" class="box edad-btn" placeholder="PESO" name="peso" id="peso" onkeypress="return edads(event)">
+                        <p>Altura</p>
+                        <input type="number" class="box edad-btn" placeholder="CM" name="altura" id="altura" onkeypress="return edads(event)"> 
+                        <p>Experiencia asesorando</p>
+                        <input type="number" class="box edad-btn" placeholder="AÑOS" name="expasesor" id="expasesor" onkeypress="return edads(event)"> 
+                        <p>Experiencia entrenando</p>
+                        <input type="number" class="box edad-btn" placeholder="AÑOS" name="expentrenando" id="expentrenando" onkeypress="return edads(event)"> 
+                        <p>Edad</p>
+                        <input type="number" class="box edad-btn" placeholder="AÑOS" name="edad" id="edad" onkeypress="return edads(event)">
+                        <p>Correo</p>
+                        <input type="text" class="box correo-btn" placeholder="example@correo.com" name="correo" id="correo">
+                        <p>Sexo</p>
+
+                        <div class="sex">
+                            <input type="radio" class="sexo" name="sexo" id="uno" value="Hombre">
+                        <label for="uno">HOMBRE</label>
+                        <input type="radio" class="sexo" name="sexo" id="dos" value="Mujer">
+                        <label for="dos">MUJER</label>
+                    </div>
+                        <br>
+                        <p>Usuario temporal</p>
+                        <input type="text" class="box pat-btn" placeholder="USUARIO" name="usuario" id="usuario" onkeypress="return usuario(event)">
+                        <p>Contraseña temporal</p>
+                        <input type="password" class="box mat-btn" placeholder="CONTRASEÑA" name="contra" id="contra">
+                        
+                    </div>
+                    <div class="boton">
+                        <input type="submit" class="button" name="registrar" value="ENVIAR SOLICITUD" onclick="return validar()">
+                    </div>
+                </form>
+                <div class="regresar">
+                    <a href="conocenos.html">REGRESAR</a>
+                </div>
+        </div>
+        <div class="imagen">
+            <img src="../imagen/entrenadorper.jpg" alt="" >
+        </div>
+    </div> 
+    
+    <p id="parrafo" style="font-family: Corbel Light"></p>
+    </body>
+</html>

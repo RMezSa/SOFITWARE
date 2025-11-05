@@ -1,0 +1,40 @@
+.container__form{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    
+}
+
+input{
+    background-color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+.button{
+    margin-top: 0.7rem;
+}
+
+.input__form{
+    background: #fff;
+}
+
+.sign{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.button__regresar-2{
+    margin-left: 23rem;
+    width: 6rem;
+    height: 2.5rem;
+    background-color: #006D77;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-left: 8px;
+}
+

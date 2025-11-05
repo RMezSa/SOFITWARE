@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html  lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Log-In</title>
+    <script>
+        function lleno(){
+            var usuario = document.getElementById("user");
+            var contraseña = document.getElementById("contr");
+            
+            if (usuario.value === ""){
+                    swal("Ingrese un usuario");
+                    return false;
+                }
+                else
+                    if (contraseña.value === ""){
+                        swal("Ingrese una contraseña");
+                        return false;
+                    }
+                    else
+                        return true;
+        }
+        
+        function solotexto(event) {
+                 var numeros = "abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+                 var x = event.which || event.keyCode;
+                 var valid = String.fromCharCode(x);
+                 var letra = numeros.indexOf(valid);
+                 if(letra === -1)
+                     return false;
+                 else
+                     return true;
+            }       
+            function miFuncion(){
+               // document.getElementById("parrafo").innerHTML=
+                        swal("Intenta de nuevo");
+            }
+            
+            Swal.fire({
+               icon: warning,
+               background: '#000',
+            });
+    </script>
+</head>
+<body>
+        <div class="container">
+                <h1 class="regis">ENTRENADOR LOGIN</h1>    
+            <form action="jsploginentrenador.jsp" class="sign">
+                    <div class="campo">
+                    
+                        <p>Usuario</p>
+                        <input type="text" class="box pat-btn" placeholder="USUARIO" id="user" name="user" onkeypress=" return solotexto(event)" >
+                        <p>Contraseña</p>
+                        <input type="password" class="box mat-btn" placeholder="CONTRASEÑA" id="contr" name="contr">
+                        <br><br>
+                        <div class="boton">
+                            <input type="submit" class="button" onclick="return lleno()" value="LOGIN" name="iniciar">
+                        </div>
+                        
+                    </div>
+
+                    
+                    
+                </form>
+                <div class="regresar">
+                    <a href="index.html">ATRAS</a>
+                </div>
+        </div>
+    <p id="parrafo" style="font-family: Corbel Light"></p>
+    </body>
+</html>
+
+

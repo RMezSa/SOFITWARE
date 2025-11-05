@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    
+}
+body{
+    background-size: cover;
+    background-image: url(../IMG/gym.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(15px);
+    
+}
+.container{
+    position: absolute;
+    
+    text-align: center;
+    top: 200px;
+    left: 30%;
+    width: 400px;
+    height: 400px;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 1vh;
+}
+
+.formulario-comment{
+    position: relative;
+    text-align: center;
+    width: auto;
+    text-align: center;
+    
+}
+.comment{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 30px;
+    color: black;
+}
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+    text-align: left;
+    border-collapse: collapse;
+}
+h1{/*
+    display: list-item;
+    list-style: none;*/
+    text-decoration: none;
+    /*top: 120px;*/
+    position: relative;
+    color: black;
+    font-family: system-ui;
+}
+.button{
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    margin-bottom: 100px;
+}
+
+th, td{
+    border: solid 3px black;
+    padding: 10;
+}
+thead{
+    background-color: black;
+    color: white;
+    font-family: system-ui;
+    align-items: center;
+}
+tr:nth-child(even){
+    background-color: darkseagreen;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: system-ui;
+}
+regresar{
+ text-align: center;
+ align-content: center;
+ align-items: center;
+}
+td{
+    color: white;
+}
+.button{
+    color: black;
+    background-color: greenyellow;
+    
+    font-family: system-ui;
+    width: 200px;
+}

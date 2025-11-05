@@ -1,0 +1,132 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-size: cover;
+    background-image: url(../imagen/fondonegro.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    position: relative;
+    top: 100px;
+    left: 10%;
+    float: left;
+}
+.container h1{
+    color: white;
+    font-family: Corbel Light;
+    font-size: 150%;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+}
+.campo p{
+    color: white;
+    font-style: normal;
+    font-family: Corbel Light;
+    font-size:130%;
+    text-indent: 0%;
+    text-decoration: none;
+}
+.box{
+    overflow: hidden;
+    width: 110%;
+    padding: 5px 0;
+    font-size: 100%;
+    margin: 8px 0;
+}
+.campo input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.822);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.651);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.815);
+  }
+
+
+  .sex p{
+    color: white;
+    text-decoration: none;
+    font-family: Corbel Light;
+    font-size: 130%;
+    font-style: normal;
+    margin-left: 45%;
+
+  }
+  .sex{
+      display: flex;
+  }
+ .boton .button{
+    width: 100%;
+    background: none;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: auto;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: Corbel Light;
+    font-size: 120%;
+ }
+
+input[type="radio"]{
+    background-attachment: fixed;
+    width: 50px;
+    align-items: center;
+
+}
+
+label{
+    position: relative;
+    color: white;
+    font-style: normal;
+    font-family: Corbel Light;
+    font-size: 110%;
+    text-indent: 0%;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    align-items: center;
+    left: 2%;
+    
+    cursor: pointer;
+}
+.regresar{
+    
+    top: 10px;
+ }
+ .regresar a{
+     color: white;
+     border: 2px;
+     border-color: white;
+     cursor: pointer;
+    text-decoration: none;
+    font-family: 'Courier New';
+    
+ }
+.imagen {
+    width: 50%;
+    float: left;
+    left: 20%;
+    top: 150px;
+    position: relative;
+}

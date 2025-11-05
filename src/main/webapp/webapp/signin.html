@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign_in</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/signin.css">
+   <script>
+        function nombres(e){
+            var numeros = "qwertyuioplkjhgfds azxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM";
+            var x = e.which || e.keycode;
+            var numero = String.fromCharCode(x);
+            var n = numeros.indexOf(numero);
+            if(n === -1){
+                return false;
+            }
+            else 
+                return true;    
+            }
+            function cancions(e){
+                var numeros = "qwertyuioplkjhgfdsazxcvbnmQWERTYUIOP LKJHGFDSAZXCVBNM0123456987";
+                var x = e.which || e.keycode;
+                var numero = String.fromCharCode(x);
+                var n = numeros.indexOf(numero);
+                if(n === -1){
+                    return false;
+                }
+                else 
+                    return true;
+            }
+            function edads(e){
+                var numeros = "0123456789";
+                var x = e.which || e.keycode;
+                var numero = String.fromCharCode(x);
+                var n = numeros.indexOf(numero);
+                    if(n === -1){
+                        return false;
+                    }
+                    else 
+                        return true;
+            }
+            function validar(){
+                var ok = true;
+                var nom = document.getElementById("nombre");
+                var usu = document.getElementById("usuario");
+                var con = document.getElementById("contra");
+                var eda = document.getElementById("edad");
+                var cor = document.getElementById("correo").value;
+                var hom = document.getElementById("uno");
+                var muj = document.getElementById("dos");
+                
+                if (nom.value === ""){
+                    swal("Ingresa un nombre");
+                    return false;
+                }
+                else
+                    if (usu.value === ""){
+                        swal("Ingresa un usuario");
+                        return false;
+                    }
+                else
+                    if(con.value === ""){
+                        swal("Ingresa una contraseña");
+                        return false;
+                    }
+                else
+                    if (con.value.length <= 4){
+                        swal("Ingresa una contrasena por lo menos de 5 caracteres");
+                        return false;
+                    }
+                else
+                    if(eda.value === ""){
+                        swal("Ingresa una edad");
+                        return false;
+                    }
+                else 
+                    if(eda.value.length >= 3){
+                        swal("Ingresa una edad correcta");
+                        return false;
+                    }
+                else
+                    if(!/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(cor)){
+                        swal("Ingrese un correo correcto");
+                        return false;
+                    }
+                else
+                    if(hom.checked === false && muj.checked === false){
+                        swal("Ingresa un género");
+                        return false;
+                    }
+                return true;
+            }    
+           
+            
+    </script>
+</head>
+<body>
+    <div class="float">
+    
+    <div class="container">
+                <h1 class="regis">SIGN IN USER</h1>    
+            <form action="sign-in.jsp" class="sign">
+                    <div class="campo">
+                        <p>Nombre</p>
+                        <input type="text" class="box nombre-btn" placeholder="NOMBRE" name="nombre" id="nombre" onkeypress="return nombres(event)">
+                        <p>Usuario</p>
+                        <input type="text" class="box pat-btn" placeholder="USUARIO" name="usuario" id="usuario" onkeypress="return cancions(event)">
+                        <p>Contraseña</p>
+                        <input type="password" class="box mat-btn" placeholder="CONTRASEÑA" name="contra" id="contra">
+                        <p>Edad</p>
+                        <input type="number" class="box edad-btn" placeholder="EDAD" name="edad" id="edad" onkeypress="return edads(event)">
+                        <p>Correo</p>
+                        <input type="text" class="box correo-btn" placeholder="example@correo.com" name="correo" id="correo">
+                        <p>Sexo</p>
+
+                        <div class="sex">
+                            <input type="radio" class="sexo" name="sexo" id="uno" value="Hombre">
+                        <label for="uno">HOMBRE</label>
+                        <input type="radio" class="sexo" name="sexo" id="dos" value="Mujer">
+                        <label for="dos">MUJER</label>
+                    </div>
+                        
+                    </div>
+                    <div class="boton">
+                        <input type="submit" class="button" name="registrar" value="REGISTRAR" onclick="return validar()">
+                    </div>
+                </form>
+                <div class="regresar">
+                    <a href="signentrenador.html">SIGN IN ENTRENADOR</a>
+                </div>
+        </div>
+        <div class="imagen">
+            <img src="../imagen/entrenadorper.jpg" alt="" >
+        </div>
+    </div> 
+    
+    
+    <p id="parrafo" style="font-family: Corbel Light"></p>
+    </body>
+</html>
