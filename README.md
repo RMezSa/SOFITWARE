@@ -77,11 +77,7 @@ SOFITWARE es una plataforma web para la gestión de un gimnasio que incluye:
    cp target/SOFITWARE5TO-1.0-SNAPSHOT.war /path/to/tomcat/webapps/
    ```
 
-6. **Acceder a la aplicación**
-   
-   Abrir en el navegador: `http://localhost:8080/SOFITWARE5TO-1.0-SNAPSHOT/`
-
-## 📁 Estructura del Proyecto
+6. **Estructura del Proyecto**
 
 ```
 SOFITWARE5TO/
@@ -107,53 +103,17 @@ Por motivos de copyright, las imágenes originales **NO están incluidas** en es
 
 Si deseas ejecutar el proyecto, necesitarás:
 - Reemplazar las imágenes en `src/main/webapp/IMG/` con tus propias imágenes o usar placeholders
-- Las imágenes esperadas incluyen: `Coach1.jpg`, `Coach2.png`, `Logo.jpg`, etc.
 
 ### Sobre la Seguridad
 
 ⚠️ **ADVERTENCIA:** Este es un proyecto académico de 2022. El código contiene prácticas que **NO son adecuadas para producción**:
 
-- Las consultas SQL son vulnerables a inyección SQL
-- Las contraseñas se almacenan en texto plano
-- No hay validación del lado del servidor
-- Falta manejo de sesiones seguras
-
-**Este proyecto es SOLO para fines educativos y de portafolio.** No debe usarse en producción sin antes aplicar las mejoras de seguridad necesarias.
+**Este proyecto es SOLO para fines educativos y de portafolio.** 
 
 ## 🔒 Configuración de Seguridad
 
 ### Variables de Entorno
 
-Este proyecto requiere un archivo `.env` que **NO debe ser versionado**. 
-
-**✅ Incluido en el repositorio:** `.env.example` (plantilla)  
-**❌ NO incluido:** `.env` (con credenciales reales)
-
-Asegúrate de:
-1. Copiar `.env.example` a `.env`
-2. Actualizar con tus credenciales
-3. **NUNCA** hacer commit del archivo `.env`
-
-## 👤 Autor
-
-**[Tu Nombre]**
-- Estudiante del CECyT 9 "Juan de Dios Bátiz" - IPN
-- Proyecto desarrollado en 5to semestre (2022)
-
-## 📄 Licencia
-
-Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LICENSE).
-
----
-
 ## 🎓 Contexto Académico
 
-Este proyecto fue desarrollado como parte de mi formación en preparatoria, específicamente durante el 5to semestre en el CECyT 9 del IPN. Representa mi trabajo y aprendizaje en desarrollo web durante ese período.
-
-**Año de desarrollo:** 2022  
-**Institución:** CECyT 9 "Juan de Dios Bátiz" - IPN  
-**Nivel:** Preparatoria (5to Semestre)
-
----
-
-⭐ **Nota:** Si encuentras este proyecto útil para aprender, no dudes en darle una estrella en GitHub!
+Este proyecto fue desarrollado como parte de mi formación en preparatoria, específicamente durante el 5to y 6to semestre en el CECyT 9 del IPN. Representa mi trabajo y aprendizaje en desarrollo web durante ese período.
